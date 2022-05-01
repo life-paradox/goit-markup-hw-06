@@ -12,6 +12,7 @@
     --text-footer-color:rgba(255, 255, 255, 0.6);
     --socials-bg-footer-color:rgba(255, 255, 255, 0.1);
     --svg-primary-color: #AFB1B8;
+    --input-border-color: rgba(33, 33, 33, 0.2);
 
     --timig-function: cubic-bezier(0.4, 0, 0.2, 1);
         
@@ -51,51 +52,6 @@ p{
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-}
-
-.backdrop{
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-
-}
-
-.modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-
-    min-width: 528px;
-    min-height: 581px;
-    background-color: var(--primary-bg-color);
-}
-
-.modal-close-btn{
-    position: absolute;
-    right: 8px;
-    top: 8px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 30px;
-    height: 30px;
-
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.is-hidden{
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
 }
 
 /* Navigation & Contacts */
@@ -393,19 +349,19 @@ p{
 }
 
 .icon-antenna::before{
-    background-image: url(../images/studio/svg/antenna.svg);
+    background-image: url(../images/svg/antenna.svg);
 }
 
 .icon-clock::before{
-    background-image: url(../images/studio/svg/clock.svg);
+    background-image: url(../images/svg/clock.svg);
 }
 
 .icon-diagram::before{
-    background-image: url(../images/studio/svg/diagram.svg);
+    background-image: url(../images/svg/diagram.svg);
 }
 
 .icon-astronaut::before{
-    background-image: url(../images/studio/svg/astronaut.svg);
+    background-image: url(../images/svg/astronaut.svg);
 }
 
 .features-item+.features-item {
@@ -718,7 +674,6 @@ p{
     justify-content: center;
 
     position: relative;
-    /* display: inline; */
     padding: 10px 29px;
     min-width: 200px;
     margin-left: 12px;
@@ -726,6 +681,184 @@ p{
 
 .icon-send{
     margin-left: 10px;
+}
+
+/* Modal window */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--primary-bg-color);
+}
+
+.modal-close-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    color: var(--primary-black-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus{
+    color: var(--accent-color);
+}
+
+.modal-title{
+    margin-bottom: 12px;
+}
+
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-field{
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-comment{
+    margin-bottom: 20px;
+}
+
+.form-label{
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+}
+
+.form-input{
+    width: 100%;
+    padding: 12px 12px 12px 42px;
+
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+
+    transition: all 250ms var(--timig-function);
+}
+
+.form-input:focus + .input-icon,
+.form-input:hover + .input-icon{
+    color: var(--accent-color);
+    transition: color 250ms var(--timig-function);
+}
+
+.form-input:focus,
+.form-input:hover,
+.form-input:focus-visible,
+.form-input:focus-within{
+    border: 1px solid var(--accent-color);
+}
+
+.input-icon{
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+    color: var(--primary-black-color);
+}
+
+.agreement-label{
+    padding-left: 30px; 
+
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+}
+
+.checkbox{
+    
+    margin-bottom: 30px;
+}
+
+.checkbox-input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.icon-check{
+    position: absolute;
+    display: inline-block;
+    left: 10px;
+    top: 5px;
+    width: 16px;
+    height: 15px;
+    color: var(--primary-bg-color);
+
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 2px;
+}
+
+.checkbox-input:checked ~ .icon-check{
+    border: 2px solid transparent;
+    background-image: url(../images/svg/check-icon.svg);
+    background-origin: border-box;
+
+}
+
+.form-textarea{
+    resize: none;
+    width: 100%;
+    padding: 12px 16px;
+    height: 120px;
+}
+
+.modal-submit-btn{
+    padding: 10px 56px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus{
+    color: var(--primary-bg-color);
+    background-color: #188CE8;
 }
 
 /* portfolio.html */
