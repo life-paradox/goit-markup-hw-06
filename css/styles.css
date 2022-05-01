@@ -672,7 +672,6 @@ p{
 .subscription-input:hover,
 .subscription-input:focus{
     color: var(--primary-bg-color);
-    
 }
 
 .subscription-btn{
@@ -699,7 +698,6 @@ p{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-
 }
 
 .is-hidden {
@@ -843,7 +841,6 @@ p{
     border: 2px solid transparent;
     background-image: url(../images/svg/check-icon.svg);
     background-origin: border-box;
-
 }
 
 .form-textarea{
@@ -933,7 +930,6 @@ p{
     display: block;
     padding: 20px 24px;
     border: 1px solid var(--card-border-color);
-   
 }
 
 .portfolio-item .link{
