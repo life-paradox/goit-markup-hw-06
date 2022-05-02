@@ -716,6 +716,10 @@ p{
     min-width: 528px;
     min-height: 581px;
     background-color: var(--primary-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 .modal-close-btn {
@@ -742,6 +746,12 @@ p{
 
 .modal-title{
     margin-bottom: 12px;
+
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
 }
 
 .modal-form{
@@ -841,6 +851,10 @@ p{
     border: 2px solid transparent;
     background-image: url(../images/svg/check-icon.svg);
     background-origin: border-box;
+}
+
+.agreement-conditions{
+    color: var(--accent-color);
 }
 
 .form-textarea{
