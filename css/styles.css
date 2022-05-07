@@ -42,6 +42,8 @@ p{
 }
 
 .section{
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -52,6 +54,12 @@ p{
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.page-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Navigation & Contacts */
@@ -579,6 +587,8 @@ p{
 .page-footer{
     padding-top: 60px;
     padding-bottom: 60px;
+    /* margin-left: auto;
+    margin-right: auto; */
 
 }
 
